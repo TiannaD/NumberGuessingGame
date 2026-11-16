@@ -3,20 +3,22 @@
 
 using namespace std;
 
-//This program generates a random number and asks the user to guess it correctly
+//This program generates a random number and asks the user to guess it correctly.
 
 int main() {
 
-	int min = 1;
-	int max = 10;
+	const int MIN = 1;
+	const int MAX = 10;
 
 	random_device rd;
 	mt19937 gen(rd());
-	uniform_int_distribution<> distrib(min, max);
+	uniform_int_distribution<> distrib(MIN, MAX);
 
 	int randomNumber = distrib(gen);
 
-	cout << "Guess a number 1-10" << endl << "Correct number: " << randomNumber << endl;
+	//Debug ling
+	//cout << "Guess a number 1-10" << endl << "Correct number: " << randomNumber << endl;
+	cout << "Guess a number 1-10" << endl;
 
 	int count = 0;
 	int userGuess;
