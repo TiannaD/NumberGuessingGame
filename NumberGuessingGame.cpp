@@ -3,6 +3,8 @@
 
 using namespace std;
 
+//This program generates a random number and asks the user to guess it correctly
+
 int main() {
 
 	int min = 1;
@@ -32,9 +34,15 @@ int main() {
 			cout << "Too high. Try again." << endl << "Guesses: " << count << endl;
 			cin >> userGuess;
 		}
+		else {
+			count++;
+		}
 	}
 
-
+	if (userGuess == randomNumber) {
+		count++;
+		cout << "You guessed it right!" << endl << "Total guesses: " << count << endl;
+	}
 
 	return 0;
 }
