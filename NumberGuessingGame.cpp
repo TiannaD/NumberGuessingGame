@@ -16,8 +16,7 @@ int main() {
 
 	int randomNumber = distrib(gen);
 
-	//cout << randomNumber;
-	cout << "Guess a number 1-10" << endl;
+	cout << "Guess a number 1-10" << endl << "Correct number: " << randomNumber << endl;
 
 	int count = 0;
 	int userGuess;
